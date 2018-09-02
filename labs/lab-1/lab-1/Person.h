@@ -1,44 +1,108 @@
-#include <iostream>
-#include <string>
+//
+//  Person.h
+//  lab-1
+//
+//  Created by Viktor Anashkin on 9/2/18.
+//  Copyright © 2018 BSU. All rights reserved.
+//
+
+#ifndef Person_h
+#define Person_h
+#include "Date.h"
+
 using namespace std;
 
-const int MAX_LENGTH = 50;
-
 class Person {
-    char name[MAX_LENGTH];
-    char address[MAX_LENGTH];
+    string firstName;
+    string lastName;
+    string patronymic;
+    string phone;
+    string address;
+    Date birthdate;
     
 public:
-    void setAddress (char* address) {
-        if (strlen(address) > MAX_LENGTH) {
-            cout << "error" << endl;
-            exit(1);
-        }
-        strcpy(this->address, address);
-    }
-    char* getAddress() {
-        return this->address;
-    }
-    void setName (char* name) {
-        if (strlen(name) > MAX_LENGTH) {
-            cout << "error" << endl;
-            exit(1);
-        }
-        strcpy(this->name, name);
-    }
-    char* getName() {
-        return this->name;
-    }
+    void setFirstName(string);
+    void setLastName(string);
+    void setPatronymic(string);
+    void setPhone(string);
+    void setAddress(string);
+    void setBirthdate(Date);
     
-    Person(char* address, char* name) {
-        setAddress(address);
-        setName(name);
-    }
-    Person() {
-        setAddress("Minsk");
-        setName("Ivanov Ivan Ivanovich");
-    }
-    void showInfo() {
-        cout << name << endl << address << endl;
-    }
+    string getFirstName();
+    string getLastName();
+    string getPatronymic();
+    string getPhone();
+    string getAddress();
+    Date getBirthdate();
+    
+    Person();
+    Person(string, string, string, string, string, Date);
+    ~Person() {};
 };
+
+void Person::setFirstName(string name) {
+    firstName = name;
+}
+
+void Person::setLastName(string name) {
+    lastName = name;
+}
+
+void Person::setPatronymic(string name) {
+    patronymic = name;
+}
+
+void Person::setPhone(string phone) {
+    this->phone = phone;
+}
+
+void Person::setAddress(string address) {
+    this->address = address;
+}
+
+void Person::setBirthdate(Date date) {
+    birthdate = date;
+}
+
+string Person::getFirstName() {
+    return firstName;
+}
+
+string Person::getLastName() {
+    return lastName;
+}
+
+string Person::getPatronymic() {
+    return patronymic;
+}
+
+string Person::getPhone() {
+    return phone;
+}
+
+string Person::getAddress() {
+    return address;
+}
+
+Date Person::getBirthdate() {
+    return birthdate;
+}
+
+Person::Person() {
+    setFirstName("");
+    setPatronymic("");
+    setLastName("");
+    setPhone("");
+    setAddress("");
+    setBirthdate(Date());
+}
+
+Person::Person(string firstName, string patronymic, string lastName, string phone, string address, Date birthdate) {
+    setFirstName(firstName);
+    setPatronymic(patronymic);
+    setLastName(lastName);
+    setPhone(phone);
+    setAddress(address);
+    setBirthdate(birthdate);
+}
+#endif /* Person_h */
