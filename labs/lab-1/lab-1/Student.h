@@ -80,6 +80,6 @@ Student::Student() {
 Student::Student(Person info, string faculty, int course) {
     personInfo = info;
     this->faculty = faculty;
-    course = course;
+    this->course = course;
 }
 #endif /* Student_h */

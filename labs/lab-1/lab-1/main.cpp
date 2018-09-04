@@ -7,12 +7,13 @@
 //
 
 #include <iostream>
-#include "Student.h"
-
+#include <fstream>
+#include "StudentList.h"
 
 using namespace std;
 
 int main(int argc, const char * argv[]) {
-
+    StudentList list = StudentList("data.txt");
+    list.print();
     return 0;
 }

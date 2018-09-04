@@ -23,11 +23,14 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B711713213C7A9E004DFFA2 /* json.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.h; fileEncoding = 4; path = json.h; sourceTree = "<group>"; };
 		5BA84DCF213BF85300E19C5B /* lab-1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "lab-1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA84DD2213BF85300E19C5B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5BA84DD9213BFDAC00E19C5B /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
 		5BA84DDA213C035A00E19C5B /* Person.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		5BA84DDB213C050B00E19C5B /* Date.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Date.h; sourceTree = "<group>"; };
+		5BEF7FF5213EDAB9001CA0AA /* data.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = data.txt; sourceTree = "<group>"; };
+		5BEF7FF6213EE357001CA0AA /* StudentList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StudentList.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,9 +64,12 @@
 			isa = PBXGroup;
 			children = (
 				5BA84DD2213BF85300E19C5B /* main.cpp */,
+				5BEF7FF5213EDAB9001CA0AA /* data.txt */,
 				5BA84DD9213BFDAC00E19C5B /* Student.h */,
 				5BA84DDA213C035A00E19C5B /* Person.h */,
 				5BA84DDB213C050B00E19C5B /* Date.h */,
+				5B711713213C7A9E004DFFA2 /* json.h */,
+				5BEF7FF6213EE357001CA0AA /* StudentList.h */,
 			);
 			path = "lab-1";
 			sourceTree = "<group>";

@@ -97,7 +97,14 @@ Person::Person() {
     setBirthdate(Date());
 }
 
-Person::Person(string firstName, string patronymic, string lastName, string phone, string address, Date birthdate) {
+Person::Person(
+               string firstName,
+               string patronymic,
+               string lastName,
+               string phone,
+               string address,
+               Date birthdate
+               ) {
     setFirstName(firstName);
     setPatronymic(patronymic);
     setLastName(lastName);

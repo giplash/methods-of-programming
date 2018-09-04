@@ -1,0 +1,15 @@
+Anashkin
+Viktor
+Andreevich
+14 4 2000
+Minsk, Oktyabrskaya 10a
++375 29 8981600
+mmf 2
+
+Eroshkin
+Pavel
+Petuhovich
+10 10 2000
+Brest
++375 29 1234567
+mmf 1
