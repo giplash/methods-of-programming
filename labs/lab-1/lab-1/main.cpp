@@ -10,10 +10,12 @@
 #include <fstream>
 #include "StudentList.h"
 
+
 using namespace std;
 
 int main(int argc, const char * argv[]) {
     StudentList list = StudentList("data.txt");
-    list.print();
+    list.printAll();
+    list.printFaculty("mmf");
     return 0;
 }

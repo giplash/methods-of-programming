@@ -17,59 +17,14 @@ class StudentList {
     vector<Student> students;
     string path;
     void readData();
+    void printElement(int);
 public:
-    void print();
+    void printAll();
+    void printFaculty(string);
+    void filter();
     StudentList(string);
 };
 
-void StudentList::readData() {
-    ifstream stream(path);
-    string firstName;
-    string lastName;
-    string patronymic;
-    string address;
-    string phone;
-    string faculty;
-    string empty;
-    int day;
-    int month;
-    int year;
-    int course;
-    Person person;
-    Date date;
-    Student student;
-    if (stream.is_open()) {
-        while (!stream.eof()) {
-            stream >> lastName >> firstName >> patronymic;
-            stream >> day >> month >> year;
-            getline(stream, empty);
-            getline(stream, address);
-            getline(stream, phone);
-            stream >> faculty >> course;
-            if (stream.eof()) break;
-            date = Date(year, month, day);
-            person = Person(firstName, patronymic, lastName, phone, address, date);
-            student = Student(person, faculty, course);
-            students.push_back(student);
-        }
-        stream.close();
-    } else {
-        cout << "file can't be opened" << endl;
-        exit(1);
-    }
-}
-
-void StudentList::print() {
-    for (int i = 0; i < students.size(); i++) {
-        students[i].show();
-        cout << "-------------------------" << endl;
-    }
-}
-
-StudentList::StudentList(string path) {
-    this->path = path;
-    readData();
-}
 
 
 
