@@ -21,6 +21,8 @@ class StudentList {
 public:
     void printAll();
     void printFaculty(string);
+    void printByYear(int);
+    void printByCourse(int);
     void filter();
     StudentList(string);
 };

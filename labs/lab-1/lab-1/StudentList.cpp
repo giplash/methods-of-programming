@@ -71,6 +71,22 @@ void StudentList::printFaculty(string faculty) {
     }
 }
 
+void StudentList::printByCourse(int course) {
+    for (int i = 0; i < students.size(); i++) {
+        if (students[i].getCourse() == course) {
+            printElement(i);
+        }
+    }
+};
+
+void StudentList::printByYear(int year) {
+    for (int i = 0; i < students.size(); i++) {
+        if (students[i].getPersonInfo().getBirthdate().getYear() >= year) {
+            printElement(i);
+        }
+    }
+}
+
 void StudentList::printAll() {
     for (int i = 0; i < students.size(); i++) {
         printElement(i);
