@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5B0FB1EC214C560900CAD346 /* iStudentList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5B0FB1EB214C560900CAD346 /* iStudentList.cpp */; };
 		5BA84DD3213BF85300E19C5B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BA84DD2213BF85300E19C5B /* main.cpp */; };
 		5BEF7FF8214187EE001CA0AA /* StudentList.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF7FF7214187EE001CA0AA /* StudentList.cpp */; };
 		5BEF7FFA21418848001CA0AA /* Student.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 5BEF7FF921418848001CA0AA /* Student.cpp */; };
@@ -27,6 +28,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		5B0FB1EA214C55A500CAD346 /* iStudentList.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = iStudentList.h; sourceTree = "<group>"; };
+		5B0FB1EB214C560900CAD346 /* iStudentList.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = iStudentList.cpp; sourceTree = "<group>"; };
 		5BA84DCF213BF85300E19C5B /* lab-1 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "lab-1"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BA84DD2213BF85300E19C5B /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		5BA84DD9213BFDAC00E19C5B /* Student.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Student.h; sourceTree = "<group>"; };
@@ -51,6 +54,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5B0FB1E8214C40C000CAD346 /* headers */ = {
+			isa = PBXGroup;
+			children = (
+				5BA84DDB213C050B00E19C5B /* Date.h */,
+				5BA84DDA213C035A00E19C5B /* Person.h */,
+				5BA84DD9213BFDAC00E19C5B /* Student.h */,
+				5BEF7FF6213EE357001CA0AA /* StudentList.h */,
+				5B0FB1EA214C55A500CAD346 /* iStudentList.h */,
+			);
+			path = headers;
+			sourceTree = "<group>";
+		};
+		5B0FB1E9214C40D400CAD346 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				5BEF7FFD214188DA001CA0AA /* Date.cpp */,
+				5BEF7FFB214188AA001CA0AA /* Person.cpp */,
+				5BEF7FF921418848001CA0AA /* Student.cpp */,
+				5BEF7FF7214187EE001CA0AA /* StudentList.cpp */,
+				5B0FB1EB214C560900CAD346 /* iStudentList.cpp */,
+			);
+			path = src;
+			sourceTree = "<group>";
+		};
 		5BA84DC6213BF85300E19C5B = {
 			isa = PBXGroup;
 			children = (
@@ -70,15 +97,9 @@
 		5BA84DD1213BF85300E19C5B /* lab-1 */ = {
 			isa = PBXGroup;
 			children = (
+				5B0FB1E8214C40C000CAD346 /* headers */,
+				5B0FB1E9214C40D400CAD346 /* src */,
 				5BA84DD2213BF85300E19C5B /* main.cpp */,
-				5BEF7FF6213EE357001CA0AA /* StudentList.h */,
-				5BEF7FF7214187EE001CA0AA /* StudentList.cpp */,
-				5BA84DD9213BFDAC00E19C5B /* Student.h */,
-				5BEF7FF921418848001CA0AA /* Student.cpp */,
-				5BA84DDA213C035A00E19C5B /* Person.h */,
-				5BEF7FFB214188AA001CA0AA /* Person.cpp */,
-				5BA84DDB213C050B00E19C5B /* Date.h */,
-				5BEF7FFD214188DA001CA0AA /* Date.cpp */,
 				5BEF7FF5213EDAB9001CA0AA /* data.txt */,
 			);
 			path = "lab-1";
@@ -145,6 +166,7 @@
 				5BEF7FFC214188AA001CA0AA /* Person.cpp in Sources */,
 				5BEF7FF8214187EE001CA0AA /* StudentList.cpp in Sources */,
 				5BEF7FFE214188DA001CA0AA /* Date.cpp in Sources */,
+				5B0FB1EC214C560900CAD346 /* iStudentList.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

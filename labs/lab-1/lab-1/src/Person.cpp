@@ -7,50 +7,50 @@
 //
 
 #include <stdio.h>
-#include <string>
+#include <cstring>
 #include "Person.h"
 
-void Person::setFirstName(string name) {
-    firstName = name;
+void Person::setFirstName(char* name) {
+    strcpy(this->firstName, name);
 }
 
-void Person::setLastName(string name) {
-    lastName = name;
+void Person::setLastName(char* name) {
+    strcpy(this->lastName, name);
 }
 
-void Person::setPatronymic(string name) {
-    patronymic = name;
+void Person::setPatronymic(char* name) {
+    strcpy(this->patronymic, name);
 }
 
-void Person::setPhone(string phone) {
-    this->phone = phone;
+void Person::setPhone(char* phone) {
+    strcpy(this->phone, phone);
 }
 
-void Person::setAddress(string address) {
-    this->address = address;
+void Person::setAddress(char* address) {
+    strcpy(this->address, address);
 }
 
 void Person::setBirthdate(Date date) {
     birthdate = date;
 }
 
-string Person::getFirstName() {
+char* Person::getFirstName() {
     return firstName;
 }
 
-string Person::getLastName() {
+char* Person::getLastName() {
     return lastName;
 }
 
-string Person::getPatronymic() {
+char* Person::getPatronymic() {
     return patronymic;
 }
 
-string Person::getPhone() {
+char* Person::getPhone() {
     return phone;
 }
 
-string Person::getAddress() {
+char* Person::getAddress() {
     return address;
 }
 
@@ -68,11 +68,11 @@ Person::Person() {
 }
 
 Person::Person(
-               string firstName,
-               string patronymic,
-               string lastName,
-               string phone,
-               string address,
+               char* firstName,
+               char* patronymic,
+               char* lastName,
+               char* phone,
+               char* address,
                Date birthdate
                ) {
     setFirstName(firstName);

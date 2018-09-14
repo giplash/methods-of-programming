@@ -12,21 +12,21 @@
 
 class Student {
     Person personInfo;
-    string faculty;
+    char faculty[20];
     int course;
 public:
     void setPersonInfo(Person);
-    void setFaculty(string);
+    void setFaculty(char*);
     void setCourse(int);
     
     Person getPersonInfo();
-    string getFaculty();
+    char* getFaculty();
     int getCourse();
     
-    void show();
+    void print();
     
     Student();
-    Student(Person, string, int);
+    Student(Person, char*, int);
     ~Student() {};
 };
 

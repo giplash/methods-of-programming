@@ -8,7 +8,9 @@
 
 #ifndef Date_h
 #define Date_h
-#include <string>
+#include <stdlib.h>
+#include <stdio.h>
+
 
 using namespace std;
 
@@ -27,7 +29,7 @@ public:
     int getMonth();
     int getDay();
     
-    string getString();
+    char* toString();
     
     Date();
     Date(int, int, int);

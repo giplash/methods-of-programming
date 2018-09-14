@@ -8,6 +8,7 @@
 
 #include <stdio.h>
 #include "Date.h"
+#include <cstring>
 #include <string>
 
 int Date::getYear() {
@@ -40,17 +41,21 @@ void Date::setDate(int year, int month, int day) {
     setDay(day);
 }
 
-string Date::getString() {
-    string year = to_string(this->year);
-    string month = to_string(this->month);
-    string day = to_string(this->day);
-    if (month.length() == 1) {
-        month = "0" + month;
-    }
-    if (day.length() == 1) {
-        day = "0" + day;
-    }
-    return day + "." + month + "." + year;
+char* Date::toString() {
+    std::string dayString = std::to_string(this->day);
+    char* day = new char[dayString.length() - 1];
+    strcpy(day, dayString.c_str());
+    
+    std::string monthString = std::to_string(this->month);
+    char* month = new char[monthString.length() - 1];
+    strcpy(month, monthString.c_str());
+    
+    std::string yearString = std::to_string(this->year);
+    char* year = new char[yearString.length() - 1];
+    strcpy(year, yearString.c_str());
+    
+    
+    return strcat(strcat(strcat(strcat(day, "."), month), "."), year);
 }
 
 Date::Date() {

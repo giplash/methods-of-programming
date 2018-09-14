@@ -15,16 +15,15 @@ using namespace std;
 
 class StudentList {
     vector<Student> students;
-    string path;
-    void readData();
+
     void printElement(int);
 public:
     void printAll();
-    void printFaculty(string);
-    void printByYear(int);
-    void printByCourse(int);
-    void filter();
-    StudentList(string);
+    StudentList filterByFaculty(char*);
+    StudentList filterByYear(int);
+    StudentList filterByCourse(int);
+
+    StudentList(vector<Student>);
 };
 
 
