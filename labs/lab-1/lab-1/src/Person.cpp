@@ -11,23 +11,43 @@
 #include "Person.h"
 
 void Person::setFirstName(char* name) {
-    strcpy(this->firstName, name);
+    if (name != nullptr)  {
+        strcpy(this->firstName, name);
+    } else {
+        strcpy(this->firstName, "");
+    }
 }
 
 void Person::setLastName(char* name) {
-    strcpy(this->lastName, name);
+    if (name != nullptr)  {
+        strcpy(this->lastName, name);
+    } else {
+        strcpy(this->lastName, "");
+    }
 }
 
 void Person::setPatronymic(char* name) {
-    strcpy(this->patronymic, name);
+    if (name != nullptr)  {
+        strcpy(this->patronymic, name);
+    } else {
+        strcpy(this->patronymic, "");
+    }
 }
 
 void Person::setPhone(char* phone) {
-    strcpy(this->phone, phone);
+    if (phone != nullptr)  {
+        strcpy(this->phone, phone);
+    } else {
+        strcpy(this->phone, "");
+    }
 }
 
 void Person::setAddress(char* address) {
-    strcpy(this->address, address);
+    if (address != nullptr)  {
+        strcpy(this->address, address);
+    } else {
+        strcpy(this->address, "");
+    }
 }
 
 void Person::setBirthdate(Date date) {

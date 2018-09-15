@@ -18,6 +18,7 @@ class Date {
     int year;
     int month;
     int day;
+    
 public:
     void setDate(int, int, int);
     

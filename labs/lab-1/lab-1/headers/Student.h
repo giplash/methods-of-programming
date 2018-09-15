@@ -10,10 +10,13 @@
 #define Student_h
 #include "Person.h"
 
+#define MAX_LENGTH 50
+
 class Student {
     Person personInfo;
-    char faculty[20];
+    char faculty[MAX_LENGTH];
     int course;
+    char res[200];
 public:
     void setPersonInfo(Person);
     void setFaculty(char*);
@@ -24,6 +27,7 @@ public:
     int getCourse();
     
     void print();
+    char* toString();
     
     Student();
     Student(Person, char*, int);

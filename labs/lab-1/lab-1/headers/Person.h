@@ -9,15 +9,17 @@
 #ifndef Person_h
 #define Person_h
 #include "Date.h"
+#define MAX_LENGTH 50
 
 using namespace std;
 
+
 class Person {
-    char firstName[20];
-    char lastName[20];
-    char patronymic[20];
-    char phone[20];
-    char address[20];
+    char firstName[MAX_LENGTH];
+    char lastName[MAX_LENGTH];
+    char patronymic[MAX_LENGTH];
+    char phone[MAX_LENGTH];
+    char address[MAX_LENGTH];
     Date birthdate;
     
 public:

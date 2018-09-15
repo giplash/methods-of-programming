@@ -10,6 +10,7 @@
 #include "Date.h"
 #include <cstring>
 #include <string>
+#include "DateValidator.h"
 
 int Date::getYear() {
     return year;
@@ -24,15 +25,28 @@ int Date::getDay() {
 }
 
 void Date::setYear(int year) {
-    this->year = year;
+    if (DateValidator::isValidYear(year)) {
+        this->year = year;
+    } else {
+        this->year = -3;
+    }
 }
 
+
 void Date::setMonth(int month) {
-    this->month = month;
+    if (DateValidator::isValidMonth(month)) {
+        this->month = month;
+    } else {
+        this->month = -2;
+    }
 }
 
 void Date::setDay(int day) {
-    this->day = day;
+    if (DateValidator::isValidDay(day)) {
+        this->day = day;
+    } else {
+        this->day = -1;
+    }
 }
 
 void Date::setDate(int year, int month, int day) {

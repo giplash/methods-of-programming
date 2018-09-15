@@ -13,16 +13,18 @@
 
 
 void StudentList::printElement(int i) {
-    students[i].print();
+    cout << students[i].toString() << endl;
     cout << "-------------------------" << endl;
 }
 
 
 StudentList StudentList::filterByFaculty(char* faculty) {
     vector<Student> newStudents;
-    for (int i = 0; i < students.size(); i++) {
-        if (strcmp(students[i].getFaculty(), faculty) == 0) {
-            newStudents.push_back(students[i]);
+    if (faculty != nullptr) {
+        for (int i = 0; i < students.size(); i++) {
+            if (strcmp(students[i].getFaculty(), faculty) == 0) {
+                newStudents.push_back(students[i]);
+            }
         }
     }
     return StudentList(newStudents);
